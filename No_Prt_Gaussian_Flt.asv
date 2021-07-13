@@ -1,0 +1,21 @@
+
+Xpos_temp1=Xpos_int1;
+Ypos_temp1=Ypos_int1;
+Zpos_temp1=Zpos_int1;
+Xpos_temp2=Xpos_int2;
+Ypos_temp2=Ypos_int2;
+Zpos_temp2=Zpos_int2;
+
+for i=1:numel(Xpos_temp1)
+    Ipos_temp1(i)=I1(Ypos_temp1(i),Xpos_temp1(i),Zpos_temp1(i));
+   
+end
+ for i=1:numel(Xpos_temp2)
+    Ipos_temp2(i)=I2(Ypos_temp2(i),Xpos_temp2(i),Zpos_temp2(i));
+ end
+
+Ipos_temp1=Ipos_temp1'; Ipos_temp2=Ipos_temp2';
+
+   Xpos_T=[Xpos_temp1;Xpos_temp2];
+    Ypos_T=[Ypos_temp1;Ypos_temp2];
+    Ipos_T=[Ipos_temp1;Ipos_temp2];
